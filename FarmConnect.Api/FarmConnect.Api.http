@@ -1,0 +1,23 @@
+@FarmConnect.Api_HostAddress = http://localhost:5097
+
+### Get all products
+GET {{FarmConnect.Api_HostAddress}}/api/products
+Accept: application/json
+
+### Get one product
+GET {{FarmConnect.Api_HostAddress}}/api/products/1
+Accept: application/json
+
+### Get a missing product
+GET {{FarmConnect.Api_HostAddress}}/api/products/999
+Accept: application/json
+
+### Create a product
+POST {{FarmConnect.Api_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Fresh Tomatoes",
+  "price": 60,
+  "stock": 20
+}
